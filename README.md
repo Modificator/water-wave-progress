@@ -40,10 +40,10 @@ CSDN:http://blog.csdn.net/modificator  很久没写了
 
 多图
 
-<div style="width:600px"><img src="screenshot/pai_20140818_145906.jpg" width="400">
-<img src="screenshot/pai_20140818_145916.jpg" width="400">
-<img src="screenshot/pai_20140818_145919.jpg" width="400">
-<img src="screenshot/pai_20140818_145921.jpg" width="400">
-<img src="screenshot/pai_20140818_145925.jpg" width="400"></div>
+<div style="width:600px"><img src="screenshot/pai_20140818_145906.jpg" width="200">
+<img src="screenshot/pai_20140818_145916.jpg" width="200">
+<img src="screenshot/pai_20140818_145919.jpg" width="200">
+<img src="screenshot/pai_20140818_145921.jpg" width="200">
+<img src="screenshot/pai_20140818_145925.jpg" width="200"></div>
 
 
