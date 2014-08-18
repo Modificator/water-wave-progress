@@ -21,6 +21,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.ProgressBar;
 
 /**
  * @author Administrator
@@ -35,7 +36,9 @@ public class WaterWaveProgress extends View {
 	private int mRingColor, mRingBgColor, mWaterColor, mWaterBgColor,
 			mFontSize, mTextColor;
 	// 进度 //浪峰个数
-	float mProgress = 10, mMaxProgress = 100, crestCount = 1.5f;
+	float  crestCount = 1.5f;
+	
+	int mProgress = 10, mMaxProgress = 100;
 
 	// 画布中心点
 	private Point mCenterPoint;
@@ -105,6 +108,8 @@ public class WaterWaveProgress extends View {
 		mShowNumerical = attrInit.isShowNumerical();
 		mFontSize = attrInit.getFontSize();
 		mTextColor = attrInit.getTextColor();
+		mProgress = attrInit.getProgress();
+		mMaxProgress = attrInit.getMaxProgress();
 
 		// 如果手机版本在4.0以上,则开启硬件加速
 		if (VERSION.SDK_INT >= VERSION_CODES.ICE_CREAM_SANDWICH) {
@@ -204,11 +209,11 @@ public class WaterWaveProgress extends View {
 				+ waterPadding - mRingWidth / 2, mRingPaint);
 		mRingPaint.setColor(mRingColor);
 		// 100为 总进度
-		canvas.drawArc(oval, -90, mProgress / mMaxProgress * 360, false,
+		canvas.drawArc(oval, -90, (mProgress*1f) / mMaxProgress * 360f, false,
 				mRingPaint);
 
 		// 计算出水的高度
-		float waterHeight = waterHeightCount * (1 - mProgress / mMaxProgress)
+		float waterHeight = waterHeightCount * (1 - (mProgress*1f) / mMaxProgress)
 				+ waterPadding;
 		int staticHeight = (int) (waterHeight + mAmplitude);
 		Path mPath = new Path();
@@ -260,7 +265,7 @@ public class WaterWaveProgress extends View {
 			waveHeight = newWaveHeight;
 		}
 		if (mShowNumerical) {
-			String progressTxt = String.format("%.0f", mProgress / mMaxProgress
+			String progressTxt = String.format("%.0f", (mProgress*1f) / mMaxProgress
 					* 100f)
 					+ "%";
 			float mTxtWidth = mTextPaint.measureText(progressTxt, 0,
@@ -304,14 +309,14 @@ public class WaterWaveProgress extends View {
 	/**
 	 * 设置当前进度
 	 */
-	public void setProgress(float progress) {
+	public void setProgress(int progress) {
 		progress = progress > 100 ? 100 : progress < 0 ? 0 : progress;
 		mProgress = progress;
 		invalidate();
 	}
 
 	/** 获取进度 动画时会用到 */
-	public float getProgress() {
+	public int getProgress() {
 		return mProgress;
 	}
 
@@ -399,7 +404,7 @@ public class WaterWaveProgress extends View {
 	 * 
 	 * @param mMaxProgress
 	 */
-	public void setMaxProgress(float mMaxProgress) {
+	public void setMaxProgress(int mMaxProgress) {
 		this.mMaxProgress = mMaxProgress;
 	}
 

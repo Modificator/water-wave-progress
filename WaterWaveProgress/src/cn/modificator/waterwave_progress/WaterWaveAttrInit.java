@@ -18,6 +18,8 @@ public class WaterWaveAttrInit {
 	private boolean showNumerical; // 是否显示百分比
 	private int fontSize;
 	private int textColor;
+	private int progress;
+	private int maxProgress;
 
 	@SuppressLint("Recycle")
 	public WaterWaveAttrInit(Context context, AttributeSet attrs, int defStyle) {
@@ -32,8 +34,7 @@ public class WaterWaveAttrInit {
 		waterWaveColor = typedArray.getColor(
 				R.styleable.WaterWaveProgress_waterWaveColor, 0XFF4BBDFE);
 		waterWaveBgColor = typedArray.getColor(
-				R.styleable.WaterWaveProgress_waterWaveBgColor,
-				0xFFDDDDDD);
+				R.styleable.WaterWaveProgress_waterWaveBgColor, 0xFFDDDDDD);
 		progress2WaterWidth = typedArray.getDimensionPixelOffset(
 				R.styleable.WaterWaveProgress_progress2WaterWidth, 0);
 		showProgress = typedArray.getBoolean(
@@ -42,8 +43,12 @@ public class WaterWaveAttrInit {
 				R.styleable.WaterWaveProgress_showNumerical, true);
 		fontSize = typedArray.getDimensionPixelOffset(
 				R.styleable.WaterWaveProgress_fontSize, 0);
-		textColor = typedArray.getColor(R.styleable.WaterWaveProgress_textColor,
-				0xFFFFFFFF);
+		textColor = typedArray.getColor(
+				R.styleable.WaterWaveProgress_textColor, 0xFFFFFFFF);
+		progress = typedArray.getInteger(
+				R.styleable.WaterWaveProgress_progress, 15);
+		maxProgress = typedArray.getInteger(
+				R.styleable.WaterWaveProgress_maxProgress, 100);
 		typedArray.recycle();
 	}
 
@@ -82,8 +87,17 @@ public class WaterWaveAttrInit {
 	public int getFontSize() {
 		return fontSize;
 	}
+
 	public int getTextColor() {
 		return textColor;
+	}
+
+	public int getProgress() {
+		return progress;
+	}
+
+	public int getMaxProgress() {
+		return maxProgress;
 	}
 
 }

@@ -1,8 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/cn.modificator.waterwaveprogressdemo"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res/cn.modificator.waterwaveprogressdemo">
 
     <cn.modificator.waterwave_progress.WaterWaveProgress
         android:id="@+id/waterWaveProgress1"
@@ -10,6 +9,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        app:progress="15"
+        app:maxProgress="100"
         android:layout_weight="1" />
 
     <ScrollView
@@ -34,6 +35,7 @@
                 android:id="@+id/seekBar1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:progress="15"
                 android:max="100" />
 
             <CheckBox

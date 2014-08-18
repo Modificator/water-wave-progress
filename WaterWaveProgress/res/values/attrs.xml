@@ -8,10 +8,12 @@
         <attr name="progressBgColor" format="color" />
         <attr name="waterWaveColor" format="color" />
         <attr name="waterWaveBgColor" format="color" />
-        <attr name="progress2WaterWidth" format="dimension"/>
-        <attr name="showProgress" format="boolean"/>
-        <attr name="showNumerical" format="boolean"/>
+        <attr name="progress2WaterWidth" format="dimension" />
+        <attr name="showProgress" format="boolean" />
+        <attr name="showNumerical" format="boolean" />
         <attr name="textColor" format="color" />
+        <attr name="progress" format="integer" />
+        <attr name="maxProgress" format="integer" />
     </declare-styleable>
 
 </resources>
