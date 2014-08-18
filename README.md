@@ -23,6 +23,8 @@ so,限制4.0以上  让2.3见鬼去吧,,还有4.1.1 水波是方的,官方不支
         <attr name="showProgress" format="boolean"/>
         <attr name="showNumerical" format="boolean"/>
         <attr name="textColor" format="color" />
+        <attr name="progress" format="integer" />
+        <attr name="maxProgress" format="integer" />
     </declare-styleable>
 
 </resources>
