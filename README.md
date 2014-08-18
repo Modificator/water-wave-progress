@@ -39,6 +39,11 @@ CSDN:http://blog.csdn.net/modificator  很久没写了
 ![p2en.gif](screenshot/p2en.gif "")
 
 多图
-![pai_20140818_145906.jpg](screenshot/pai_20140818_145906.jpg "")![pai_20140818_145916.jpg](screenshot/pai_20140818_145916.jpg "")![pai_20140818_145919.jpg](screenshot/pai_20140818_145919.jpg "")![pai_20140818_145921.jpg](screenshot/pai_20140818_145921.jpg "")![pai_20140818_145925.jpg](screenshot/pai_20140818_145925.jpg "")
+
+<div style="width:600px"><img src="screenshot/pai_20140818_145906.jpg" width="400">
+<img src="screenshot/pai_20140818_145916.jpg" width="400">
+<img src="screenshot/pai_20140818_145919.jpg" width="400">
+<img src="screenshot/pai_20140818_145921.jpg" width="400">
+<img src="screenshot/pai_20140818_145925.jpg" width="400"></div>
 
 
