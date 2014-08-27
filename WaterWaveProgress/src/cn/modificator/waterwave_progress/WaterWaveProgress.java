@@ -146,7 +146,7 @@ public class WaterWaveProgress extends View {
 		}
 	}
 
-	@SuppressLint("DrawAllocation")
+	@SuppressLint({ "DrawAllocation", "NewApi" })
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
 		// 获取整个View（容器）的宽、高
@@ -163,6 +163,11 @@ public class WaterWaveProgress extends View {
 					: mProgress2WaterWidth;
 			mRingPaint.setStrokeWidth(mRingWidth);
 			mTextPaint.setTextSize(mFontSize == 0 ? width / 5 : mFontSize);
+			if (VERSION.SDK_INT==VERSION_CODES.JELLY_BEAN) {
+				setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+			}else {
+				setLayerType(View.LAYER_TYPE_HARDWARE, null);
+			}
 		}
 
 		RectF oval = new RectF();
