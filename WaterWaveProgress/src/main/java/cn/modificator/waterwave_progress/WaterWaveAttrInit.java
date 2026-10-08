@@ -20,6 +20,7 @@ public class WaterWaveAttrInit {
 	private int textColor;
 	private int progress;
 	private int maxProgress;
+	private float crestCount; // 浪峰个数（波浪数量）
 
 	@SuppressLint("Recycle")
 	public WaterWaveAttrInit(Context context, AttributeSet attrs, int defStyle) {
@@ -49,6 +50,8 @@ public class WaterWaveAttrInit {
 				R.styleable.WaterWaveProgress_progress, 15);
 		maxProgress = typedArray.getInteger(
 				R.styleable.WaterWaveProgress_maxProgress, 100);
+		crestCount = typedArray.getFloat(
+				R.styleable.WaterWaveProgress_crestCount, 1.5f);
 		typedArray.recycle();
 	}
 
@@ -98,6 +101,10 @@ public class WaterWaveAttrInit {
 
 	public int getMaxProgress() {
 		return maxProgress;
+	}
+
+	public float getCrestCount() {
+		return crestCount;
 	}
 
 }

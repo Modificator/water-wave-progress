@@ -119,6 +119,7 @@ public class WaterWaveProgress extends View {
         mTextColor = attrInit.getTextColor();
         mProgress = attrInit.getProgress();
         mMaxProgress = attrInit.getMaxProgress();
+        crestCount = attrInit.getCrestCount();
 
         // 如果手机版本在4.0以上,则开启硬件加速
         if (VERSION.SDK_INT >= VERSION_CODES.ICE_CREAM_SANDWICH) {
@@ -427,12 +428,16 @@ public class WaterWaveProgress extends View {
     }
 
     /**
-     * 设置浪峰个数
+     * 设置浪峰个数（波浪数量）
      *
-     * @param crestCount
+     * @param crestCount 视口内波浪的周期数，值越大波浪越密集，须大于0
      */
     public void setCrestCount(float crestCount) {
+        if (crestCount <= 0) {
+            throw new IllegalArgumentException("crestCount must be positive");
+        }
         this.crestCount = crestCount;
+        invalidate();
     }
 
     /**

@@ -14,6 +14,7 @@
         android:layout_weight="1"
         app:maxProgress="100"
         app:progress="15"
+        app:crestCount="2.5"
         app:progressBgColor="#ffca60"
         app:progressColor="@android:color/holo_orange_dark"
         app:waterWaveBgColor="#ffca60"
